@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  onload='Allread()'>
+    <div class="container">
+        <div>
+            <form class="create_form" id="form">
+                <input type='number' required class="UserId" placeholder="UserId"/>
+                <input type="text" class="FN" placeholder="FN"/>
+                <input type="text" class="LN" placeholder="LN"/>
+                <input type="number" class="Phone" placeholder="Phone"/>
+                <input type="email" class="Email" placeholder="Email"/>
+                <input type="text" class="Gender" placeholder="Gender"/>
+                <input type="text" class="City" placeholder="City"/>
+                <button type="submit" onclick="add()">Create</button>
+            </form>
+            <form class="update_form" id="formm">
+                <input type='number'  class="userid" hidden  placeholder="UserId"/>
+                <input type="text" class="fn" placeholder="FN"/>
+                <input type="text" class="ln" placeholder="LN"/>
+                <input type="number" class="phone" placeholder="Phone"/>
+                <input type="email" class="email" placeholder="Email"/>
+                <input type="text" class="gender" placeholder="Gender"/>
+                <input type="text" class="city" placeholder="City"/>
+                <button type="submit" onclick="update()">Updte</button>
+            </form>
+     
+            <table>
+                <thead>
+            <th scope="col">UserId</th>
+            <th scope="col">FN</th>
+            <th scope="col">LN</th>
+            <th scope="col" >Email</th>
+            <th scope="col" >Gender</th>
+            <th scope="col" >Phone</th>
+            <th scope="col" >City</th>
+                </thead>
+                <tbody class="data_table"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="/Curd.js" ></script>
+</html>

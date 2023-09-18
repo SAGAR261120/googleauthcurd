@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container-fluid" style="margin-left: 40%;margin-top: 10%;">
+        <form id="form">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="text" name='email' id="email" class="form-control w-25" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="text" id="password"  name="password" class="form-control w-25" id="exampleInputPassword1" placeholder="Password">
+            </div>
+<br>
+            <button type="submit"  class="  btn btn-primary">login</button>
+            <b id="error"></b>
+         
+      
+          </form>
+    </div>
+</body>
+<script>
+let form = document.getElementById('form')
+form.addEventListener('click' , (e)=>{
+  e.preventDefault()
+  const data = document.getElementById('email')
+  const dataa = document.getElementById('password')
+  console.log(data.value)
+  console.log(dataa.value)
+
+  if(data.value==='admin' && dataa.value==="password")
+  {
+    window.location.href='Curd.html'
+ window.history.go(-1); return false;
+ console.log(window.history)
+   alert("done")
+  }
+
+})
+</script>
+</html>
